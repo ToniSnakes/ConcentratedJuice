@@ -19,6 +19,7 @@
     <script>scripts\scr_find_depth.gml</script>
     <script>scripts\scr_ai.gml</script>
     <script>scripts\scr_shadow_sergiu.gml</script>
+    <script>scripts\scr_shadow_wall.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>

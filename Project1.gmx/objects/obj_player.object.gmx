@@ -26,31 +26,50 @@
           <argument>
             <kind>1</kind>
             <string>{
-    if (keyboard_check(ord("D")) &amp;&amp; place_free(x+4,y)){
+    if (keyboard_check(ord("D")) &amp;&amp; place_free(x+4,y) &amp;&amp; sprite_index != spr_player_attack){
         x+=4;
         sprite_index = spr_player_run;
         image_speed = .2;
         image_xscale = 1;
     }
-    if (keyboard_check(ord("A")) &amp;&amp; place_free(x-4,y)){
+    if (keyboard_check(ord("A")) &amp;&amp; place_free(x-4,y) &amp;&amp; sprite_index != spr_player_attack){
         x-=4;
         sprite_index = spr_player_run;
         image_speed = .2;
         image_xscale = -1;
     }
-    if (keyboard_check(ord("W")) &amp;&amp; place_free(x,y-4)){
+    if (keyboard_check(ord("W")) &amp;&amp; place_free(x,y-4) &amp;&amp; sprite_index != spr_player_attack){
         y-=4;
         sprite_index = spr_player_run;
         image_speed = .2;
     }
-    if (keyboard_check(ord("S")) &amp;&amp; place_free(x,y+4)){
+    if (keyboard_check(ord("S")) &amp;&amp; place_free(x,y+4) &amp;&amp; sprite_index != spr_player_attack){
         y+=4;
         sprite_index = spr_player_run;
         image_speed = .2;
     }
-    if(!keyboard_check(ord("D")) &amp;&amp; !keyboard_check(ord("A")) &amp;&amp; !keyboard_check(ord("W")) &amp;&amp; !keyboard_check(ord("S"))){
+    if (!keyboard_check(ord("D")) &amp;&amp; !keyboard_check(ord("A")) &amp;&amp; !keyboard_check(ord("W")) &amp;&amp; !keyboard_check(ord("S")) &amp;&amp; !keyboard_check(vk_space) &amp;&amp; sprite_index != spr_player_attack){
         image_speed = 0;
         sprite_index = spr_player_stand;
+        friction = 1;
+    }
+    if (mouse_check_button(mb_left) &amp;&amp; sprite_index != spr_player_attack){
+        sprite_index = spr_player_attack;
+        image_speed = .5;
+    }
+    if (global.hp &lt;= 0) game_end();
+    //Pick up xp
+    if (distance_to_point(obj_exp.x, obj_exp.y)&lt;=16 &amp;&amp; keyboard_check(vk_space) &amp;&amp; !collision_line(x,y,obj_exp.x,obj_exp.y,obj_wall,false,true)){
+        motion_add(point_direction(x,y,obj_exp.x,obj_exp.y),1);
+        if(speed &gt;= 4) speed = 4;
+        sprite_index = spr_player_run;
+        image_speed = .2;
+        if (x &lt;= obj_exp.x){
+            image_xscale = 1;
+        }
+        else{
+            image_xscale = -1;
+        }
     }
 }
 </string>
@@ -119,6 +138,33 @@
     global.expr+=1;
     with(other){
         instance_destroy();
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="7">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>{
+    if(sprite_index == spr_player_attack) {
+        sprite_index = spr_player_stand;
     }
 }
 </string>

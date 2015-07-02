@@ -58,19 +58,6 @@
         image_speed = .5;
     }
     if (global.hp &lt;= 0) game_end();
-    //Pick up xp
-    if (distance_to_point(obj_exp.x, obj_exp.y)&lt;=16 &amp;&amp; keyboard_check(vk_space) &amp;&amp; !collision_line(x,y,obj_exp.x,obj_exp.y,obj_wall,false,true)){
-        motion_add(point_direction(x,y,obj_exp.x,obj_exp.y),1);
-        if(speed &gt;= 4) speed = 4;
-        sprite_index = spr_player_run;
-        image_speed = .2;
-        if (x &lt;= obj_exp.x){
-            image_xscale = 1;
-        }
-        else{
-            image_xscale = -1;
-        }
-    }
 }
 </string>
           </argument>

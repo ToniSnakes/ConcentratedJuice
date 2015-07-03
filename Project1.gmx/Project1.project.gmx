@@ -14,6 +14,8 @@
     <sprite>sprites\spr_exp</sprite>
     <sprite>sprites\spr_darkness</sprite>
     <sprite>sprites\spr_test</sprite>
+    <sprite>sprites\spr_torch_off</sprite>
+    <sprite>sprites\spr_torch_on</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -33,6 +35,7 @@
     <object>objects\obj_darkness</object>
     <object>objects\obj_test</object>
     <object>objects\obj_darkness_gen</object>
+    <object>objects\obj_torch</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

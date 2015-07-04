@@ -26,9 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>{
-    for (i=1;i&lt;=1000;i+=8){
-        for (j=1;j&lt;=600;j+=6){
-            instance_create(i, j, obj_darkness);
+    for (i=0;i&lt;=1000;i+=8){
+        for (j=0;j&lt;=600;j+=6){
+            if (!position_meeting(i, j, obj_wall) &amp;&amp; !position_meeting(i, j+24, obj_wall)) instance_create(i, j, obj_darkness);
         }
     }
 }

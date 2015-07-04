@@ -68,11 +68,7 @@
           <argument>
             <kind>1</kind>
             <string>{
-    if ((distance_to_point(obj_player.x, obj_player.y)&lt;=80 &amp;&amp; !collision_line(x,y,obj_player.x,obj_player.y+24,obj_wall,false,true)) || (distance_to_object(obj_torch_l)&lt;=160 &amp;&amp; instance_nearest(x, y, obj_torch_l).sprite_index == spr_torch_on_l &amp;&amp; !collision_line(x, y, instance_nearest(x, y, obj_torch_l).x, instance_nearest(x, y, obj_torch_l).y+13,obj_wall,false,true)) || (distance_to_object(obj_torch_r)&lt;=160 &amp;&amp; instance_nearest(x, y, obj_torch_r).sprite_index == spr_torch_on_r &amp;&amp; !collision_line(x, y, instance_nearest(x, y, obj_torch_r).x, instance_nearest(x, y, obj_torch_r).y+13,obj_wall,false,true))){
-        image_index = 1;
-    }
-    else //am facut un if separat pentru alea care acopera partea de jos a wall-ului, if-u de sus ii prea lung deja
-    if (((distance_to_object(instance_nearest(x, y, obj_torch_r)) &lt;=  distance_to_object(instance_nearest(x, y, obj_torch_l)) &amp;&amp; instance_nearest(x, y, obj_torch_r).sprite_index == spr_torch_on_r || (distance_to_object(instance_nearest(x, y, obj_torch_r)) &gt;  distance_to_object(instance_nearest(x, y, obj_torch_l)) &amp;&amp; instance_nearest(x, y, obj_torch_l).sprite_index == spr_torch_on_l) || distance_to_object(obj_player)&lt;=80)) &amp;&amp; place_meeting(x-4, y, obj_wall)){
+    if ((distance_to_point(obj_player.x, obj_player.y)&lt;=80 &amp;&amp; !collision_line(x,y,obj_player.x,obj_player.y+24,obj_wall,false,true)) || (distance_to_object(obj_torch_l)&lt;=120 &amp;&amp; instance_nearest(x, y, obj_torch_l).sprite_index == spr_torch_on_l &amp;&amp; !collision_line(x, y, instance_nearest(x, y, obj_torch_l).x+4, instance_nearest(x, y, obj_torch_l).y+13,obj_wall,false,true)) || (distance_to_object(obj_torch_r)&lt;=120 &amp;&amp; instance_nearest(x, y, obj_torch_r).sprite_index == spr_torch_on_r &amp;&amp; !collision_line(x, y, instance_nearest(x, y, obj_torch_r).x+4, instance_nearest(x, y, obj_torch_r).y+13,obj_wall,false,true))){
         image_index = 1;
     }
     else{

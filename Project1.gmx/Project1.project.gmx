@@ -18,6 +18,8 @@
     <sprite>sprites\spr_torch_on_r</sprite>
     <sprite>sprites\spr_torch_on_l</sprite>
     <sprite>sprites\spr_torch_off_l</sprite>
+    <sprite>sprites\spr_summoning_stone_1</sprite>
+    <sprite>sprites\spr_lich</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -26,6 +28,8 @@
     <script>scripts\scr_ai.gml</script>
     <script>scripts\scr_shadow_sergiu.gml</script>
     <script>scripts\scr_shadow_wall.gml</script>
+    <script>scripts\scr_darkness_depth.gml</script>
+    <script>scripts\scr_stats_depth.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>
@@ -39,6 +43,8 @@
     <object>objects\obj_darkness_gen</object>
     <object>objects\obj_torch_r</object>
     <object>objects\obj_torch_l</object>
+    <object>objects\obj_summoning_stone_1</object>
+    <object>objects\obj_lich</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

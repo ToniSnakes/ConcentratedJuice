@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>scr_find_depth</script>
+            <script>scr_darkness_depth</script>
           </argument>
           <argument>
             <kind>0</kind>

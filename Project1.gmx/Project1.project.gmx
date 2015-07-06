@@ -12,7 +12,6 @@
     <sprite>sprites\spr_player_run</sprite>
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_exp</sprite>
-    <sprite>sprites\spr_darkness</sprite>
     <sprite>sprites\spr_test</sprite>
     <sprite>sprites\spr_torch_off_r</sprite>
     <sprite>sprites\spr_torch_on_r</sprite>
@@ -40,14 +39,13 @@
     <object>objects\obj_globals</object>
     <object>objects\obj_stats</object>
     <object>objects\obj_enemy</object>
-    <object>objects\obj_darkness</object>
     <object>objects\obj_test</object>
-    <object>objects\obj_darkness_gen</object>
     <object>objects\obj_torch_r</object>
     <object>objects\obj_torch_l</object>
     <object>objects\obj_summoning_stone_1</object>
     <object>objects\obj_lich</object>
     <object>objects\obj_fire_lich</object>
+    <object>objects\obj_lighting</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

@@ -20,6 +20,8 @@
     <sprite>sprites\spr_torch_off_l</sprite>
     <sprite>sprites\spr_summoning_stone_1</sprite>
     <sprite>sprites\spr_lich</sprite>
+    <sprite>sprites\spr_fire_lich</sprite>
+    <sprite>sprites\spr_sign_fire</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -45,6 +47,7 @@
     <object>objects\obj_torch_l</object>
     <object>objects\obj_summoning_stone_1</object>
     <object>objects\obj_lich</object>
+    <object>objects\obj_fire_lich</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

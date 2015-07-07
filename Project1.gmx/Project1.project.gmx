@@ -21,6 +21,7 @@
     <sprite>sprites\spr_lich</sprite>
     <sprite>sprites\spr_fire_lich</sprite>
     <sprite>sprites\spr_sign_fire</sprite>
+    <sprite>sprites\spr_shielded_summoning_stone_1</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>

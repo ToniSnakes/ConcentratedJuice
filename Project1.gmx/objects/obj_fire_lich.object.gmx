@@ -96,7 +96,7 @@
  sprite_index=spr_fire_lich;
 
 if (image_speed&gt;0 &amp;&amp; sprite_index==spr_fire_lich)
- if (image_index&gt;image_number-2)
+ if (image_index+2&gt;image_number)
   instance_destroy();
 
 if (instance_exists(obj_player))

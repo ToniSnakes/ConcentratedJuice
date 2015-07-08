@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -89,6 +89,19 @@
         image_speed = .8;
     }
     //if (global.hp &lt;= 0) game_end();
+    //instant lich romm debug teleporter
+    if (keyboard_check_released(ord("G"))){
+        room_goto(rm_lich);
+    }
+    //quick light-up
+    if (keyboard_check_released(ord("L"))){
+        with (obj_torch_r){
+            sprite_index = spr_torch_on_r;
+        }
+        with (obj_torch_l){
+            sprite_index = spr_torch_on_l;
+        }
+    }
 }
 </string>
           </argument>
@@ -131,6 +144,35 @@
           <argument>
             <kind>0</kind>
             <string></string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_town_warp">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>{
+    if (obj_town_warp.visible == true){
+        room_goto(rm_town);
+        obj_player.x = 448;
+        obj_player.y = 336;
+    }
+}
+</string>
           </argument>
         </arguments>
       </action>

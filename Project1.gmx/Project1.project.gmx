@@ -22,6 +22,9 @@
     <sprite>sprites\spr_fire_lich</sprite>
     <sprite>sprites\spr_sign_fire</sprite>
     <sprite>sprites\spr_shielded_summoning_stone_1</sprite>
+    <sprite>sprites\spr_warp</sprite>
+    <sprite>sprites\spr_boss_wall</sprite>
+    <sprite>sprites\spr_town_warp</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -36,6 +39,7 @@
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_wall</object>
+    <object>objects\obj_bosswall</object>
     <object>objects\obj_exp</object>
     <object>objects\obj_globals</object>
     <object>objects\obj_stats</object>
@@ -47,9 +51,14 @@
     <object>objects\obj_lich</object>
     <object>objects\obj_fire_lich</object>
     <object>objects\obj_lighting</object>
+    <object>objects\obj_warp</object>
+    <object>objects\obj_boss_wall</object>
+    <object>objects\obj_town_warp</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
+    <room>rooms\rm_town</room>
+    <room>rooms\rm_mob_area</room>
+    <room>rooms\rm_lich</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

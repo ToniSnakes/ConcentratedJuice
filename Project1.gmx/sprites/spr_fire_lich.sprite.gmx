@@ -35,5 +35,6 @@
     <frame index="12">images\spr_fire_lich_12.png</frame>
     <frame index="13">images\spr_fire_lich_13.png</frame>
     <frame index="14">images\spr_fire_lich_14.png</frame>
+    <frame index="15">images\spr_fire_lich_15.png</frame>
   </frames>
 </sprite>

@@ -91,6 +91,8 @@
     //if (global.hp &lt;= 0) game_end();
     //instant lich romm debug teleporter
     if (keyboard_check_released(ord("G"))){
+        x = 512;
+        y = 648;
         room_goto(rm_lich);
     }
     //quick light-up

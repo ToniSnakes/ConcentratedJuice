@@ -56,7 +56,7 @@
           <argument>
             <kind>1</kind>
             <string>{
-    obj_player.y -= 48;
+    obj_player.y -= 24;
     instance_create(x1, y1, obj_bosswall);
     instance_create(x2, y2, obj_bosswall);
 }

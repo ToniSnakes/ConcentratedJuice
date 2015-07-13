@@ -270,7 +270,7 @@
     <instance objName="obj_lighting" x="64" y="528" name="inst_BF39012A" locked="0" code="{&#xA;    r_color = c_white;&#xA;}&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_globals" x="64" y="48" name="inst_6BCE9EF1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_stats" x="64" y="48" name="inst_63734217" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_warp" x="32" y="720" name="inst_35EA9A19" locked="0" code="target_x = 480;&#xA;target_y = 48;&#xA;target_r = rm_town;&#xA;" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_warp" x="32" y="720" name="inst_35EA9A19" locked="0" code="target_x = 480;&#xA;target_y = 72;&#xA;target_r = rm_town;&#xA;" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="544" y="552" name="inst_2DD495CB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_warp" x="768" y="0" name="inst_B1B98983" locked="0" code="target_x = 512;&#xA;target_y = 648;&#xA;target_r = rm_lich;&#xA;" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_town_warp" x="768" y="96" name="inst_31287353" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>

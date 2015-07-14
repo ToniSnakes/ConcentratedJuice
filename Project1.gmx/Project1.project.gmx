@@ -6,27 +6,43 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_player_stand</sprite>
-    <sprite>sprites\spr_enemy_run</sprite>
-    <sprite>sprites\spr_player_attack</sprite>
-    <sprite>sprites\spr_player_run_aux</sprite>
-    <sprite>sprites\spr_wall</sprite>
-    <sprite>sprites\spr_exp</sprite>
-    <sprite>sprites\spr_test</sprite>
-    <sprite>sprites\spr_torch_off_r</sprite>
-    <sprite>sprites\spr_torch_on_r</sprite>
-    <sprite>sprites\spr_torch_on_l</sprite>
-    <sprite>sprites\spr_torch_off_l</sprite>
-    <sprite>sprites\spr_summoning_stone_1</sprite>
-    <sprite>sprites\spr_lich</sprite>
-    <sprite>sprites\spr_fire_lich</sprite>
-    <sprite>sprites\spr_sign_fire</sprite>
-    <sprite>sprites\spr_shielded_summoning_stone_1</sprite>
-    <sprite>sprites\spr_warp</sprite>
-    <sprite>sprites\spr_boss_wall</sprite>
-    <sprite>sprites\spr_town_warp</sprite>
-    <sprite>sprites\spr_player_run</sprite>
-    <sprite>sprites\spr_projectile_lich</sprite>
+    <sprites name="enemy">
+      <sprite>sprites\spr_enemy_run</sprite>
+      <sprites name="Lich">
+        <sprite>sprites\spr_lich</sprite>
+        <sprite>sprites\spr_summoning_stone_1</sprite>
+        <sprite>sprites\spr_fire_lich</sprite>
+        <sprite>sprites\spr_sign_fire</sprite>
+        <sprite>sprites\spr_shielded_summoning_stone_1</sprite>
+        <sprite>sprites\spr_projectile_lich</sprite>
+      </sprites>
+    </sprites>
+    <sprites name="Other">
+      <sprite>sprites\spr_exp</sprite>
+      <sprite>sprites\spr_test</sprite>
+    </sprites>
+    <sprites name="Player">
+      <sprite>sprites\spr_player_stand</sprite>
+      <sprite>sprites\spr_player_run_aux</sprite>
+      <sprite>sprites\spr_player_attack</sprite>
+      <sprite>sprites\spr_player_idle</sprite>
+      <sprite>sprites\spr_head</sprite>
+      <sprite>sprites\spr_player_run</sprite>
+    </sprites>
+    <sprites name="Teleporters">
+      <sprite>sprites\spr_warp</sprite>
+      <sprite>sprites\spr_town_warp</sprite>
+    </sprites>
+    <sprites name="Torches">
+      <sprite>sprites\spr_torch_on_r</sprite>
+      <sprite>sprites\spr_torch_off_r</sprite>
+      <sprite>sprites\spr_torch_on_l</sprite>
+      <sprite>sprites\spr_torch_off_l</sprite>
+    </sprites>
+    <sprites name="Walls">
+      <sprite>sprites\spr_wall</sprite>
+      <sprite>sprites\spr_boss_wall</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -39,24 +55,40 @@
     <script>scripts\scr_stats_depth.gml</script>
   </scripts>
   <objects name="objects">
-    <object>objects\obj_player</object>
-    <object>objects\obj_wall</object>
-    <object>objects\obj_bosswall</object>
-    <object>objects\obj_exp</object>
-    <object>objects\obj_globals</object>
-    <object>objects\obj_stats</object>
-    <object>objects\obj_enemy</object>
-    <object>objects\obj_test</object>
-    <object>objects\obj_torch_r</object>
-    <object>objects\obj_torch_l</object>
-    <object>objects\obj_summoning_stone_1</object>
-    <object>objects\obj_lich</object>
-    <object>objects\obj_fire_lich</object>
-    <object>objects\obj_lighting</object>
-    <object>objects\obj_warp</object>
-    <object>objects\obj_boss_wall</object>
-    <object>objects\obj_town_warp</object>
-    <object>objects\obj_projectile_lich</object>
+    <objects name="enemy">
+      <object>objects\obj_enemy</object>
+      <objects name="Lich">
+        <object>objects\obj_fire_lich</object>
+        <object>objects\obj_summoning_stone_1</object>
+        <object>objects\obj_projectile_lich</object>
+        <object>objects\obj_lich</object>
+      </objects>
+    </objects>
+    <objects name="Other">
+      <object>objects\obj_exp</object>
+      <object>objects\obj_test</object>
+    </objects>
+    <objects name="Player">
+      <object>objects\obj_player</object>
+      <object>objects\obj_head</object>
+      <object>objects\obj_stats</object>
+      <object>objects\obj_globals</object>
+      <object>objects\obj_feet</object>
+    </objects>
+    <objects name="Teleporters">
+      <object>objects\obj_town_warp</object>
+      <object>objects\obj_warp</object>
+    </objects>
+    <objects name="Torches">
+      <object>objects\obj_lighting</object>
+      <object>objects\obj_torch_r</object>
+      <object>objects\obj_torch_l</object>
+    </objects>
+    <objects name="Walls">
+      <object>objects\obj_wall</object>
+      <object>objects\obj_bosswall</object>
+      <object>objects\obj_boss_wall</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_town</room>

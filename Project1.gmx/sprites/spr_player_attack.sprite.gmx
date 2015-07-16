@@ -2,7 +2,7 @@
 <sprite>
   <type>0</type>
   <xorig>16</xorig>
-  <yorigin>28</yorigin>
+  <yorigin>24</yorigin>
   <colkind>1</colkind>
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
@@ -17,8 +17,8 @@
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>38</width>
-  <height>57</height>
+  <width>32</width>
+  <height>48</height>
   <frames>
     <frame index="0">images\spr_player_attack_0.png</frame>
     <frame index="1">images\spr_player_attack_1.png</frame>
@@ -28,6 +28,5 @@
     <frame index="5">images\spr_player_attack_5.png</frame>
     <frame index="6">images\spr_player_attack_6.png</frame>
     <frame index="7">images\spr_player_attack_7.png</frame>
-    <frame index="8">images\spr_player_attack_8.png</frame>
   </frames>
 </sprite>

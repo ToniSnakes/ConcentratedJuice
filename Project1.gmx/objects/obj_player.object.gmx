@@ -60,9 +60,9 @@
     
     if (mouse_check_button_pressed(mb_left) &amp;&amp; sprite_index != spr_player_attack){
         sprite_index = spr_player_attack;
-        image_speed = .8;
+        image_speed = .5;
     }
-    if (sprite_index == spr_player_attack &amp;&amp; image_index &gt; 8){
+    if (sprite_index == spr_player_attack &amp;&amp; image_index &gt; 7){
         sprite_index = spr_player_idle;
         image_speed = 0;
     }

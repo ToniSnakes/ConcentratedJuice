@@ -62,7 +62,7 @@
         sprite_index = spr_player_attack;
         image_speed = .5;
     }
-    if (sprite_index == spr_player_attack &amp;&amp; image_index &gt; 7){
+    if (sprite_index == spr_player_attack &amp;&amp; image_index &gt; 4){
         sprite_index = spr_player_idle;
         image_speed = 0;
     }

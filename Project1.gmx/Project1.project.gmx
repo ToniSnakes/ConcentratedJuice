@@ -44,6 +44,9 @@
       <sprite>sprites\spr_wall</sprite>
       <sprite>sprites\spr_boss_wall</sprite>
     </sprites>
+    <sprites name="Props">
+      <sprite>sprites\spr_tree</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>

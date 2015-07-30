@@ -29,6 +29,7 @@
       <sprite>sprites\spr_head</sprite>
       <sprite>sprites\spr_player_run</sprite>
       <sprite>sprites\spr_player_shielded</sprite>
+      <sprite>sprites\spr_wave</sprite>
     </sprites>
     <sprites name="Teleporters">
       <sprite>sprites\spr_warp</sprite>
@@ -57,6 +58,7 @@
     <script>scripts\scr_shadow_wall.gml</script>
     <script>scripts\scr_darkness_depth.gml</script>
     <script>scripts\scr_stats_depth.gml</script>
+    <script>scripts\scr_dmg.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="enemy">
@@ -78,6 +80,7 @@
       <object>objects\obj_stats</object>
       <object>objects\obj_globals</object>
       <object>objects\obj_feet</object>
+      <object>objects\obj_wave</object>
     </objects>
     <objects name="Teleporters">
       <object>objects\obj_town_warp</object>

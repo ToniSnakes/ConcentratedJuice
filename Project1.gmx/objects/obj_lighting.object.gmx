@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>{
+    //Seteaza... Surpafata luminii?
     globalvar light;
     light = surface_create(view_wview, view_hview);
 }
@@ -52,6 +53,7 @@
           <argument>
             <kind>1</kind>
             <string>{
+    //Traseaza stratul de intuneric sau lumina: alb pentru intuneric si negru pentru lumina
     surface_set_target(light);
     draw_set_color(r_color); // ca sa putem modifica in functie de camera
     draw_rectangle(0, 0, view_wview, view_hview, false);
@@ -80,6 +82,7 @@
           <argument>
             <kind>1</kind>
             <string>{
+    //Dubiosenii
     draw_set_blend_mode(bm_subtract);
     draw_surface(light, view_xview, view_yview);
     draw_set_blend_mode(bm_normal);

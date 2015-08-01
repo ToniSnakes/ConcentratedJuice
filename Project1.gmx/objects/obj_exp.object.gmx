@@ -67,14 +67,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>    if (distance_to_point(obj_player.x, obj_player.y)&lt;=60  &amp;&amp; !collision_line(x,y,obj_player.x,obj_player.y,obj_wall,false,true)){
-
-   move_towards_point(obj_player.x,obj_player.y,5);
-        
-        }
-        if(distance_to_point(obj_player.x,obj_player.y)&lt;=9){
+            <string>{
+    //Daca este destul de aproape de player si nu este zid intre exp si el, xp-ul incepe sa se miste spre player
+    if (distance_to_point(obj_player.x, obj_player.y)&lt;=60  &amp;&amp; !collision_line(x,y,obj_player.x,obj_player.y,obj_wall,false,true)){
+        move_towards_point(obj_player.x,obj_player.y,5);
+    }
+    //Daca este foarte aproape, exp-ul dispare si se adauga la xp-ul global (cel al player-ului)
+    if(distance_to_point(obj_player.x,obj_player.y)&lt;=9){
         instance_destroy();
-  global.expr+=1;
+        global.expr+=1;
+    }
 }
 </string>
           </argument>

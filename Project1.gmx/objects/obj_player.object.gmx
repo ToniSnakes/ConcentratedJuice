@@ -26,8 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>{
-    wave = 4;
-    dir = 0;
+    //Initializare de variabile
+    wave = 4; //Timer intre click si wave creation
+    dir = 0; //Directia intre player si mouse in momentul click-ului
 }
 </string>
           </argument>
@@ -52,6 +53,7 @@
           <argument>
             <kind>1</kind>
             <string>{
+    //Seteaza raza si alte chestii dubioase pentru iluminare
     size = 64;
     draw_set_blend_mode(bm_subtract);
     surface_set_target(light);
@@ -83,32 +85,37 @@
           <argument>
             <kind>1</kind>
             <string>{
-    
+    //Animatia de atac si propularea in directia mouse-ului
     if (mouse_check_button_pressed(mb_left) &amp;&amp; sprite_index != spr_player_attack){
         sprite_index = spr_player_attack;
         image_speed = .5;
         speed = 10;
         direction = point_direction(x, y, mouse_x, mouse_y);
-        wave = -1;
-        dir = point_direction(x, y, mouse_x, mouse_y);
-        obj_feet.recovery = 1;
-        obj_feet.recovery_time = -1;
+        wave = -1; //Seteaza timer-ul wave-ului la -1
+        dir = point_direction(x, y, mouse_x, mouse_y); //Tine minte directia dintre player si mouse in momentul click-ului
+        obj_feet.recovery = 1;  //Seteaza ca "true" recovery-ul dupa un atac
+        obj_feet.recovery_time = -1; //si seteaza timer-ul la -1
     }
+    //Timer-ul propriu-zis pana la aparitia wave-ului
     if (wave &lt; 3){
         ++wave;
     }
+    //La finalul timer-ului, da peste maxim timer-ul si creeaza wave-ul
     if (wave == 3){
         instance_create(x, y, obj_wave);
         ++wave;
     }
+    //Dupa propulsarea initiala, player-ul pierde din viteza pe parcurs
     if (sprite_index == spr_player_attack &amp;&amp; image_index &lt;= 4){
         speed -= 1;
     }
+    //Sfarsitul animatie de atac
     if (sprite_index == spr_player_attack &amp;&amp; image_index &gt; 4){
         sprite_index = spr_player_idle;
         image_speed = 0;
         speed = 0;
     }
+    //Verfica daca mouse-ul este in stanga sau in dreapta player-ului si il roteste dupa caz
     if (x &gt; mouse_x){
         image_xscale = -1;
     }
@@ -195,37 +202,11 @@
           <argument>
             <kind>1</kind>
             <string>{
+    //Daca a aparut teleporter-ul, il transporta pe player in town
     if (obj_town_warp.visible == true){
         room_goto(rm_town);
         obj_player.x = 448;
         obj_player.y = 336;
-    }
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="7" enumb="7">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>{
-    if(sprite_index == spr_player_attack) {
-        sprite_index = spr_player_stand;
     }
 }
 </string>

@@ -70,6 +70,7 @@
             <string> draw_set_color(c_white);
 // mai sus am setat culoarea pe alb , sa se poata vedea deasupra intunericului 
 {
+    //Afiseaza stats-urile importante ale personajului
     draw_text(x,y,"Level: "+string(global.level));
     draw_text(x,y+16,"HP: "+string(global.hp)+"/"+string(global.maxhp));
     draw_text(x,y+32,"EXP: "+string(global.expr)+"/"+string(global.maxexpr));

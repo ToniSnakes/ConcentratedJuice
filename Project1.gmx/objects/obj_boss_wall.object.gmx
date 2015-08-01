@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>{
+    //Daca moare boss-ul, dispar wall-urile speciale
     if (!instance_exists(boss)){
         with (obj_bosswall){
             instance_destroy();
@@ -56,6 +57,7 @@
           <argument>
             <kind>1</kind>
             <string>{
+    //Teleporteaza player-ul mai infata si creeaza zidurile speciale
     obj_player.y -= 40;
     instance_create(x1, y1, obj_bosswall);
     instance_create(x2, y2, obj_bosswall);

@@ -26,12 +26,16 @@
           <argument>
             <kind>1</kind>
             <string>{
+    //Se muta dupa player
     x = obj_player.x-1;
     y = obj_player.y-16;
+    //Daca se intoarece player-ul, ii roteste capul intr-un mod "natural"
     image_yscale = obj_player.image_xscale;
+    //Ajustari
     if (x &gt; mouse_x){
         x += 2;
     }
+    //Rotire dupa mouse
     image_angle = point_direction(x, y, mouse_x, mouse_y);
 }
 </string>

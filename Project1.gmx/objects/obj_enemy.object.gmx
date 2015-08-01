@@ -26,9 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>{
+    //Declarare de variabile pentru acest obiect
     hp = 2;
-    immune = 0;
-    immune_time = 0;
+    immune = 0; //Daca este sau nu imun
+    immune_time = 0; //Timer de imunitate
 }
 </string>
           </argument>
@@ -156,9 +157,10 @@
           <argument>
             <kind>1</kind>
             <string>{
-    image_alpha = hp/2;
-    if (hp &lt;= 0) instance_destroy();
+    image_alpha = hp/2; //Ghosts fade away as they lose health
+    if (hp &lt;= 0) instance_destroy(); //Dispari daca nu mai ai viata!
     if (instance_exists(obj_player)){
+        //Roteste imaginea fantomei in asa fel incat sa se "uite" la player
         if (x &lt;= obj_player.x){
             image_xscale = 1;
         }
@@ -173,7 +175,7 @@
                 alarm[0] = 30;
             }
             
-            //Player attack
+            //Player attack vechi, pastram in caz de orice
             /*if (obj_player.sprite_index == spr_player_attack &amp;&amp; floor(obj_player.image_index) == 1) {
                 //poz player fata de inamic (stanga sau dreapta)
                 if (obj_player.image_xscale &lt; 0 &amp;&amp; x-obj_player.x &lt;=0){
@@ -252,6 +254,7 @@
           <argument>
             <kind>1</kind>
             <string>{
+    //Daca se loveste de zid sare in spate si isi pierde din viteza
     move_bounce_solid(true);
     if(speed &gt; 2) speed = speed/2;
 }
@@ -278,6 +281,7 @@
           <argument>
             <kind>1</kind>
             <string>{
+    //Daca se izbeste in player sare in spate si isi pierde din viteza
     move_bounce_all(true);
     if(speed &gt; 2) speed /= 2;
 }
@@ -304,6 +308,7 @@
           <argument>
             <kind>1</kind>
             <string>{
+    //Daca se lovesc fantomele intre ele, se imping una pe alta si is pierd din viteza
     move_bounce_all(true);
     if(speed &gt; 2) speed /= 2;
 }

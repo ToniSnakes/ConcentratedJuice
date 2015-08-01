@@ -19,7 +19,6 @@
     </sprites>
     <sprites name="Other">
       <sprite>sprites\spr_exp</sprite>
-      <sprite>sprites\spr_test</sprite>
     </sprites>
     <sprites name="Player">
       <sprite>sprites\spr_player_stand</sprite>
@@ -54,9 +53,6 @@
   <scripts name="scripts">
     <script>scripts\scr_find_depth.gml</script>
     <script>scripts\scr_ai.gml</script>
-    <script>scripts\scr_shadow_sergiu.gml</script>
-    <script>scripts\scr_shadow_wall.gml</script>
-    <script>scripts\scr_darkness_depth.gml</script>
     <script>scripts\scr_stats_depth.gml</script>
     <script>scripts\scr_dmg.gml</script>
   </scripts>
@@ -72,7 +68,6 @@
     </objects>
     <objects name="Other">
       <object>objects\obj_exp</object>
-      <object>objects\obj_test</object>
     </objects>
     <objects name="Player">
       <object>objects\obj_player</object>

@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>{
+    //Seteaza raza si deseneaza lumina cu ajutorul dubioseniilor
     size = 128;
     if (sprite_index == spr_torch_on_r){
         draw_set_blend_mode(bm_subtract);
@@ -59,6 +60,7 @@
           <argument>
             <kind>1</kind>
             <string>{
+    //Daca ajunge player-ul la torta, o aprinde
     sprite_index = spr_torch_on_r;
     image_speed = 0.2;
 }

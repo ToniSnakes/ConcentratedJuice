@@ -55,6 +55,7 @@
           <argument>
             <kind>1</kind>
             <string>{
+    //Lvl up
     if(global.expr &gt;= global.maxexpr) {
         global.level += 1;
         global.hp += 5;

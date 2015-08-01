@@ -26,10 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>{
+    //Seteaza directia de miscare si unghiul imaginii dupa directia player-mouse din momentul clikc-ului
     direction = obj_player.dir;
     speed = 12;
     image_speed = 0.25;
-    image_yscale = obj_player.image_xscale;
+    image_yscale = obj_player.image_xscale; //Sa se roteasca cum trebuie wave-ul
     image_angle = obj_player.dir;
 }
 </string>
@@ -55,6 +56,7 @@
           <argument>
             <kind>1</kind>
             <string>{
+    //Scade continuu din viteza originala
     speed -= 1;
 }
 </string>

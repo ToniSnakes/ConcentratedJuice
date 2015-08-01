@@ -26,8 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>{
-    recovery = 0;
-    recovery_time = 0;
+    //Initializarea variabilelor de care depinde recover-ul
+    recovery = 0; //Daca este sau nu in recovery
+    recovery_time = 0; //Timer-ul
 }
 </string>
           </argument>
@@ -52,8 +53,10 @@
           <argument>
             <kind>1</kind>
             <string>{
+    //Miscare dupa player
     x = obj_player.x;
     y = obj_player.y;
+    //Daca se invarte corpul, sa se invarta si picioarele
     if (x &gt; mouse_x){
         image_xscale = -1;
     }
@@ -84,7 +87,7 @@
           <argument>
             <kind>1</kind>
             <string>{
-    
+    //Miscare daca nu ataca si nu este in recovery
     if (keyboard_check(ord("D")) &amp;&amp; sprite_index != spr_player_attack &amp;&amp; recovery == 0)
     {
        if (place_free(x+4,y))
@@ -133,14 +136,17 @@
         while (place_free(x,y+1)) 
          y++;
     }
+    //Daca nu se misca, sa iasa din animatia de miscare
     if (!keyboard_check(ord("D")) &amp;&amp; !keyboard_check(ord("A")) &amp;&amp; !keyboard_check(ord("W")) &amp;&amp; !keyboard_check(ord("S")))
     {
         image_speed = 0;
         sprite_index = spr_player_stand;
     }
+    //Inceperea timer-ului de recovery
     if (recovery == 1){
         ++recovery_time;
     }
+    //Terminarea recovery phase-ului
     if (recovery_time == 6){
         recovery = 0;
     }

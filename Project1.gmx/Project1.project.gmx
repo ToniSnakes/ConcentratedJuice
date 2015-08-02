@@ -16,6 +16,7 @@
         <sprite>sprites\spr_shielded_summoning_stone_1</sprite>
         <sprite>sprites\spr_projectile_lich</sprite>
       </sprites>
+      <sprite>sprites\spr_spider</sprite>
     </sprites>
     <sprites name="Other">
       <sprite>sprites\spr_exp</sprite>
@@ -65,6 +66,7 @@
         <object>objects\obj_projectile_lich</object>
         <object>objects\obj_lich</object>
       </objects>
+      <object>objects\obj_spider</object>
     </objects>
     <objects name="Other">
       <object>objects\obj_exp</object>

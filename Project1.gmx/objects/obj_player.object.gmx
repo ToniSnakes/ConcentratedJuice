@@ -86,7 +86,7 @@
             <kind>1</kind>
             <string>{
     //Animatia de atac si propularea in directia mouse-ului
-    if (mouse_check_button_pressed(mb_left) &amp;&amp; sprite_index != spr_player_attack){
+    if (mouse_check_button_pressed(mb_left) &amp;&amp; sprite_index != spr_player_attack &amp;&amp; sprite_index != spr_player_repel){
         sprite_index = spr_player_attack;
         image_speed = .5;
         speed = 10;
@@ -137,6 +137,21 @@
         with (obj_torch_l){
             sprite_index = spr_torch_on_l;
         }
+    }
+    //repel
+    //Daca apesi click dreapta si s-a summon-uit wave-ul, apare repel-ul
+    if (mouse_check_button_pressed(mb_right) &amp;&amp; wave &gt; 3){
+        instance_create(x, y+5, obj_repel);
+        sprite_index = spr_player_repel;
+    }
+    //Sprint fix
+    if (mouse_check_button(mb_right) &amp;&amp; sprite_index == spr_player_repel &amp;&amp; speed &gt;= 1){
+        speed -=1 ;
+    }
+    //Repel destroy
+    if (mouse_check_button_released(mb_right) &amp;&amp; sprite_index == spr_player_repel){
+        with (obj_repel) instance_destroy();
+        sprite_index = spr_player_idle;
     }
 }
 </string>

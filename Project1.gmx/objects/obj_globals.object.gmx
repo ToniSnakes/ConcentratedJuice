@@ -31,6 +31,11 @@
     global.maxhp = 10;
     global.expr = 0;
     global.maxexpr = 2;
+    global.att_speed = 9;
+    global.move_speed = 4;
+    global.dmg = 1;
+    global.mana = 100;
+    global.maxmana = 100;
 }
 </string>
           </argument>

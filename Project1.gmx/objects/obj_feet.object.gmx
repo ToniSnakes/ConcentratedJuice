@@ -92,7 +92,7 @@
     {
        if (place_free(x+4,y))
        {
-        obj_player.x+=4;
+        obj_player.x+=global.move_speed;
         sprite_index = spr_player_run;
         image_speed = .7;
        }
@@ -104,7 +104,7 @@
     {
        if (place_free(x-4,y))
         {
-        obj_player.x-=4;
+        obj_player.x-=global.move_speed;
         sprite_index = spr_player_run;
         image_speed = .7;
         }
@@ -116,7 +116,7 @@
     {
        if (place_free(x,y-4))
        {
-        obj_player.y-=4;
+        obj_player.y-=global.move_speed;
         sprite_index = spr_player_run;
         image_speed = .7;
        }
@@ -128,7 +128,7 @@
     {
        if (place_free(x,y+4))
        {
-        obj_player.y+=4;
+        obj_player.y+=global.move_speed;
         sprite_index = spr_player_run;
         image_speed = .7;
        }
@@ -147,10 +147,68 @@
         ++recovery_time;
     }
     //Terminarea recovery phase-ului
-    if (recovery_time == 6){
+    if (recovery_time == global.att_speed){
         recovery = 0;
     }
-    
+    //Dodge strafe
+    if (keyboard_check_pressed(vk_shift)){
+        //Dreapta
+        if (keyboard_check(ord("D")) &amp;&amp; !keyboard_check(ord("A")) &amp;&amp; !keyboard_check(ord("W")) &amp;&amp; !keyboard_check(ord("S")) &amp;&amp; recovery == 0){
+            obj_player.direction = 0;
+            obj_player.speed = global.move_speed*3;
+            recovery = 1;
+            recovery_time = -(1+9-global.att_speed); //ca sa ramana recovery-ul dupa strafe cat de cat constant
+        }
+        //Dreapta-Sus
+        if (keyboard_check(ord("D")) &amp;&amp; !keyboard_check(ord("A")) &amp;&amp; keyboard_check(ord("W")) &amp;&amp; !keyboard_check(ord("S")) &amp;&amp; recovery == 0){
+            obj_player.direction = 45;
+            obj_player.speed = global.move_speed*3;
+            recovery = 1;
+            recovery_time = -(1+9-global.att_speed);
+        }
+        //Sus
+        if (!keyboard_check(ord("D")) &amp;&amp; !keyboard_check(ord("A")) &amp;&amp; keyboard_check(ord("W")) &amp;&amp; !keyboard_check(ord("S")) &amp;&amp; recovery == 0){
+            obj_player.direction = 90;
+            obj_player.speed = global.move_speed*3;
+            recovery = 1;
+            recovery_time = -(1+9-global.att_speed);
+        }
+        //Stanga-Sus
+        if (!keyboard_check(ord("D")) &amp;&amp; keyboard_check(ord("A")) &amp;&amp; keyboard_check(ord("W")) &amp;&amp; !keyboard_check(ord("S")) &amp;&amp; recovery == 0){
+            obj_player.direction = 135;
+            obj_player.speed = global.move_speed*3;
+            recovery = 1;
+            recovery_time = -(1+9-global.att_speed);
+        }
+        //Stanga
+        if (!keyboard_check(ord("D")) &amp;&amp; keyboard_check(ord("A")) &amp;&amp; !keyboard_check(ord("W")) &amp;&amp; !keyboard_check(ord("S")) &amp;&amp; recovery == 0){
+            obj_player.direction = 180;
+            obj_player.speed = global.move_speed*3;
+            recovery = 1;
+            recovery_time = -(1+9-global.att_speed);
+        }
+        //Stanga-Jos
+        if (!keyboard_check(ord("D")) &amp;&amp; keyboard_check(ord("A")) &amp;&amp; !keyboard_check(ord("W")) &amp;&amp; keyboard_check(ord("S")) &amp;&amp; recovery == 0){
+            obj_player.direction = 225;
+            obj_player.speed = global.move_speed*3;
+            recovery = 1;
+            recovery_time = -(1+9-global.att_speed);
+        }
+        //Jos
+        if (!keyboard_check(ord("D")) &amp;&amp; !keyboard_check(ord("A")) &amp;&amp; !keyboard_check(ord("W")) &amp;&amp; keyboard_check(ord("S")) &amp;&amp; recovery == 0){
+            obj_player.direction = 270;
+            obj_player.speed = global.move_speed*3;
+            recovery = 1;
+            recovery_time = -(1+9-global.att_speed);
+        }
+        //Dreapta-Jos
+        if (keyboard_check(ord("D")) &amp;&amp; !keyboard_check(ord("A")) &amp;&amp; !keyboard_check(ord("W")) &amp;&amp; keyboard_check(ord("S")) &amp;&amp; recovery == 0){
+            obj_player.direction = 315;
+            obj_player.speed = global.move_speed*3;
+            recovery = 1;
+            recovery_time = -(1+9-global.att_speed);
+        }
+    }
 }
 </string>
           </argument>

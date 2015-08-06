@@ -89,25 +89,24 @@
     if (mouse_check_button_pressed(mb_left) &amp;&amp; sprite_index != spr_player_attack &amp;&amp; sprite_index != spr_player_repel){
         sprite_index = spr_player_attack;
         image_speed = .5;
-        speed = 10;
+        speed = global.move_speed*3;
         direction = point_direction(x, y, mouse_x, mouse_y);
         wave = -1; //Seteaza timer-ul wave-ului la -1
         dir = point_direction(x, y, mouse_x, mouse_y); //Tine minte directia dintre player si mouse in momentul click-ului
         obj_feet.recovery = 1;  //Seteaza ca "true" recovery-ul dupa un atac
         obj_feet.recovery_time = -1; //si seteaza timer-ul la -1
     }
+    if (speed &gt; 0){
+        --speed;
+    }
     //Timer-ul propriu-zis pana la aparitia wave-ului
-    if (wave &lt; 3){
+    if (wave &lt; global.att_speed/3){
         ++wave;
     }
     //La finalul timer-ului, da peste maxim timer-ul si creeaza wave-ul
-    if (wave == 3){
+    if (wave == global.att_speed/3){
         instance_create(x, y, obj_wave);
         ++wave;
-    }
-    //Dupa propulsarea initiala, player-ul pierde din viteza pe parcurs
-    if (sprite_index == spr_player_attack &amp;&amp; image_index &lt;= 4){
-        speed -= 1;
     }
     //Sfarsitul animatie de atac
     if (sprite_index == spr_player_attack &amp;&amp; image_index &gt; 4){
@@ -140,18 +139,21 @@
     }
     //repel
     //Daca apesi click dreapta si s-a summon-uit wave-ul, apare repel-ul
-    if (mouse_check_button_pressed(mb_right) &amp;&amp; wave &gt; 3){
+    if (mouse_check_button_pressed(mb_right) &amp;&amp; wave &gt; global.att_speed/3){
         instance_create(x, y+5, obj_repel);
         sprite_index = spr_player_repel;
     }
-    //Sprint fix
-    if (mouse_check_button(mb_right) &amp;&amp; sprite_index == spr_player_repel &amp;&amp; speed &gt;= 1){
-        speed -=1 ;
-    }
     //Repel destroy
-    if (mouse_check_button_released(mb_right) &amp;&amp; sprite_index == spr_player_repel){
+    if (mouse_check_button_released(mb_right) &amp;&amp; sprite_index == spr_player_repel || global.mana &lt; 1){
         with (obj_repel) instance_destroy();
         sprite_index = spr_player_idle;
+    }
+    //Mana
+    if(global.mana &lt; global.maxmana){
+        global.mana += 1;
+    }
+    if(instance_exists(obj_repel)){
+        global.mana -= 3;
     }
 }
 </string>

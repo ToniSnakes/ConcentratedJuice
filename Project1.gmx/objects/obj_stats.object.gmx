@@ -73,8 +73,9 @@
     //Afiseaza stats-urile importante ale personajului
     draw_text(x,y,"Level: "+string(global.level));
     draw_text(x,y+16,"HP: "+string(global.hp)+"/"+string(global.maxhp));
-    draw_text(x,y+32,"EXP: "+string(global.expr)+"/"+string(global.maxexpr));
-    draw_text(x,y+48, "FPS = " + string(fps));
+    draw_text(x,y+32,"MP: "+string(global.mana)+"/"+string(global.maxmana));
+    draw_text(x,y+48,"EXP: "+string(global.expr)+"/"+string(global.maxexpr));
+    draw_text(x,y+64, "FPS = " + string(fps));
 }
 </string>
           </argument>

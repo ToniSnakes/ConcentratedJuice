@@ -1,7 +1,7 @@
 {
     //Daca se intalneste cu wave-ul, primeste damage si incepe un knockback + incepe perioada de imunitate
     if(place_meeting(x, y, obj_wave) && immune == 0){
-        hp -= 1;
+        hp -= global.dmg;
         immune = 1;
         immune_time = -1;
         speed = 20;

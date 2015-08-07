@@ -50,6 +50,12 @@
     <sprites name="Props">
       <sprite>sprites\spr_tree</sprite>
     </sprites>
+    <sprites name="Menu">
+      <sprite>sprites\spr_exit</sprite>
+      <sprite>sprites\spr_newgame</sprite>
+      <sprite>sprites\spr_cursor</sprite>
+      <sprite>sprites\spr_load</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -59,6 +65,7 @@
     <script>scripts\scr_stats_depth.gml</script>
     <script>scripts\scr_dmg.gml</script>
     <script>scripts\scr_repel.gml</script>
+    <script>scripts\spr_buttonpress.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="enemy">
@@ -97,8 +104,16 @@
       <object>objects\obj_bosswall</object>
       <object>objects\obj_boss_wall</object>
     </objects>
+    <objects name="Menu">
+      <object>objects\obj_cursor</object>
+      <object>objects\obj_save</object>
+      <object>objects\obj_exit</object>
+      <object>objects\obj_new</object>
+      <object>objects\obj_load</object>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_menu</room>
     <room>rooms\rm_town</room>
     <room>rooms\rm_mob_area</room>
     <room>rooms\rm_lich</room>

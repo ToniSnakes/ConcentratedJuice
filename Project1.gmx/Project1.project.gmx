@@ -17,6 +17,12 @@
         <sprite>sprites\spr_projectile_lich</sprite>
       </sprites>
       <sprite>sprites\spr_spider</sprite>
+      <sprites name="Fire Spirit">
+        <sprite>sprites\spr_firespirit</sprite>
+        <sprite>sprites\spr_firespirit_appearing</sprite>
+        <sprite>sprites\spr_firespirit_dissappearing</sprite>
+        <sprite>sprites\spr_firespirit_projectile</sprite>
+      </sprites>
     </sprites>
     <sprites name="Other">
       <sprite>sprites\spr_exp</sprite>
@@ -69,14 +75,22 @@
   </scripts>
   <objects name="objects">
     <objects name="enemy">
-      <object>objects\obj_enemy</object>
       <objects name="Lich">
         <object>objects\obj_fire_lich</object>
         <object>objects\obj_summoning_stone_1</object>
         <object>objects\obj_projectile_lich</object>
         <object>objects\obj_lich</object>
       </objects>
-      <object>objects\obj_spider</object>
+      <objects name="Spider">
+        <object>objects\obj_spider</object>
+      </objects>
+      <objects name="Ghost">
+        <object>objects\obj_enemy</object>
+      </objects>
+      <objects name="Fire Spirit">
+        <object>objects\obj_firespirit</object>
+        <object>objects\obj_firespirit_projectile</object>
+      </objects>
     </objects>
     <objects name="Other">
       <object>objects\obj_exp</object>

@@ -29,8 +29,8 @@
  hp=global.spider_hp ; // hit points
  immune = 0; // if the enemy can be hit or not
  immune_time = 0; // how much time the enemy is immune
- jump_timer = 0; // the spider will jump from time to time , and this timer is used for jump patterns
- damage_timer = 30; // a timer used to determine how many times can the spider hit the player 
+ jump_timer = global.spider_jump_timer; // the spider will jump from time to time , and this timer is used for jump patterns
+ damage_timer = global.spider_damage_timer; // a timer used to determine how many times can the spider hit the player 
  is_jumping = 0; // true or false , depending if the spider is jumping or not
  destination_x = 0; // destination coordinate x of the jump
  destination_y = 0; // destination coordinate y of the jump
@@ -141,15 +141,15 @@
     if (hp==0)
      instance_destroy();
 
-    if (damage_timer&lt;30) // damage timer incrementation
+    if (damage_timer&lt;global.spider_damage_timer) // damage timer incrementation
     damage_timer++;
     
-    if (jump_timer&lt;30 &amp;&amp; is_jumping==0) // jump timer incrementation
+    if (jump_timer&lt;global.spider_jump_timer &amp;&amp; is_jumping==0) // jump timer incrementation
     jump_timer++;
 
     if(instance_exists(obj_player)) // if the player is alive
     {  
-      if (is_jumping==0 &amp;&amp; jump_timer&lt;30) // if the spider is not jumping and cannot jump, he will slowly follow the player
+      if (is_jumping==0 &amp;&amp; jump_timer&lt;global.spider_jump_timer) // if the spider is not jumping and cannot jump, he will slowly follow the player
       { 
         if(distance_to_point(obj_player.x,obj_player.y) &lt;= global.spider_sight_range &amp;&amp; !collision_line(x,y,obj_player.x,obj_player.y,obj_wall,false,true)) // and there is no wall between the player and the spider
         {
@@ -163,7 +163,7 @@
         }
       }
       
-      if (is_jumping==0 &amp;&amp; jump_timer==30) // if the spider is not and can jump, he will slowly follow the player
+      if (is_jumping==0 &amp;&amp; jump_timer&gt;=global.spider_jump_timer) // if the spider is not jumping and can jump ...
       {
           if (distance_to_point(obj_player.x,obj_player.y) &gt; global.spider_sight_range) // if the spider is not near the player , he will just jump in a random direction
           {
@@ -314,9 +314,9 @@
           <argument>
             <kind>1</kind>
             <string>{
-  if (damage_timer==30)
+  if (damage_timer&gt;=global.spider_damage_timer)
   {
-    global.hp-=2; // if the spider hits the player and didn't hit the player a second before , the player will take damage
+    global.hp-=global.spider_damage; // if the spider hits the player and didn't hit the player a second before , the player will take damage
     damage_timer=0; // reset the damage timer
   }
 }

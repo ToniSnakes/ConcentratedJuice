@@ -49,7 +49,8 @@
     global.spider_jump_speed=8;
     global.spider_walk_speed=1;
     global.firespirit_attack_timer=35;
-    global.firespirit_projectile_speed=8;
+    global.firespirit_projectile_speed=11;
+    global.firespirit_projectile_damage=2;
     global.spider_jump_timer=30;
     global.spider_damage_timer=30;
     global.spider_damage=2;

@@ -5,7 +5,7 @@
         hp -= global.dmg;
         immune = 1;
         immune_time = -1;
-        speed = 20;
+        speed = 5;
         direction = obj_player.dir;
     }
     //Incepe perioada de imunitate

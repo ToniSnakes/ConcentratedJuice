@@ -28,7 +28,7 @@
             <string>{
    destination_x=obj_player.x; 
    destination_y=obj_player.y;
-   move_towards_point(destination_x,destination_y,13);
+   move_towards_point(destination_x,destination_y,global.firespirit_projectile_speed);
 }
 </string>
           </argument>
@@ -95,7 +95,7 @@
           <argument>
             <kind>1</kind>
             <string>{
-  global.hp-=2;
+  global.hp-=global.firespirit_projectile_damage;
   instance_destroy();
 }
 </string>

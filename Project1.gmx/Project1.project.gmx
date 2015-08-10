@@ -23,6 +23,11 @@
         <sprite>sprites\spr_firespirit_dissappearing</sprite>
         <sprite>sprites\spr_firespirit_projectile</sprite>
       </sprites>
+      <sprites name="Axe Knight">
+        <sprite>sprites\spr_axeknight_idle</sprite>
+        <sprite>sprites\spr_axe</sprite>
+        <sprite>sprites\spr_axeknight_shielded</sprite>
+      </sprites>
     </sprites>
     <sprites name="Other">
       <sprite>sprites\spr_exp</sprite>
@@ -90,6 +95,10 @@
       <objects name="Fire Spirit">
         <object>objects\obj_firespirit</object>
         <object>objects\obj_firespirit_projectile</object>
+      </objects>
+      <objects name="Axe Knight">
+        <object>objects\obj_axeknight</object>
+        <object>objects\obj_axe</object>
       </objects>
     </objects>
     <objects name="Other">

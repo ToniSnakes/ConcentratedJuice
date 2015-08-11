@@ -28,7 +28,6 @@
             <string>{
   hp=3; //axe knight's health
   attack_timer=0 ; // timer 
-  has_axe=1; // due to the axe boomerang attacks , the knight will attack again only if he has an axe
   immune=0;
   immune_time=0;
 }
@@ -95,69 +94,20 @@
           <argument>
             <kind>1</kind>
             <string>{
+  if (attack_timer&lt;global.axeknight_attack_timer) //attack timer incrementation
+   attack_timer++;
+    
   if (hp==0)
    instance_destroy();
 
   if (instance_exists(obj_player))
   {
-    if(distance_to_point(obj_player.x,obj_player.y) &lt;= 256 &amp;&amp; !collision_line(x,y,obj_player.x,obj_player.y,obj_wall,false,true) &amp;&amp; has_axe==1 &amp;&amp; attack_timer==40) //if the axeknight sees the player
+    if(distance_to_point(obj_player.x,obj_player.y) &lt;= global.axeknight_sight_range &amp;&amp; !collision_line(x,y,obj_player.x,obj_player.y,obj_wall,false,true) &amp;&amp; attack_timer&gt;=global.axeknight_attack_timer) //if the axeknight sees the player
      {
        instance_create(x,y,obj_axe);
-       has_axe=0;
        attack_timer=0;
      }
   }
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>{// attack timer incrementation
-  if (has_axe==1 &amp;&amp; attack_timer&lt;40)
-   attack_timer++;
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>{
- if (place_meeting(x,y,obj_axe) &amp;&amp; obj_axe.initial_x==x &amp;&amp; obj_axe.initial_y==y)
-  {
-    has_axe=1;
-  }
- 
 }
 </string>
           </argument>

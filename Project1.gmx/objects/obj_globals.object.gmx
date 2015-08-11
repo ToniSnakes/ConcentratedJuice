@@ -42,6 +42,7 @@
     global.spider_sight_range=192;
     global.axeknight_sight_range=256;
     global.firespirit_sight_range=312;
+    global.axeknight_attack_timer=65;
     global.enemy_hp=2;
     global.spider_hp=2;
     global.axeknight_hp=3;

@@ -16,7 +16,6 @@
         <sprite>sprites\spr_shielded_summoning_stone_1</sprite>
         <sprite>sprites\spr_projectile_lich</sprite>
       </sprites>
-      <sprite>sprites\spr_spider</sprite>
       <sprites name="Fire Spirit">
         <sprite>sprites\spr_firespirit</sprite>
         <sprite>sprites\spr_firespirit_appearing</sprite>
@@ -27,6 +26,10 @@
         <sprite>sprites\spr_axeknight_idle</sprite>
         <sprite>sprites\spr_axe</sprite>
         <sprite>sprites\spr_axeknight_shielded</sprite>
+      </sprites>
+      <sprites name="Spider">
+        <sprite>sprites\spr_spider_idle</sprite>
+        <sprite>sprites\spr_spider_jumping</sprite>
       </sprites>
     </sprites>
     <sprites name="Other">
@@ -60,6 +63,7 @@
     </sprites>
     <sprites name="Props">
       <sprite>sprites\spr_tree</sprite>
+      <sprite>sprites\spr_grass_patch</sprite>
     </sprites>
     <sprites name="Menu">
       <sprite>sprites\spr_exit</sprite>
@@ -78,6 +82,7 @@
     <script>scripts\scr_repel.gml</script>
     <script>scripts\spr_buttonpress.gml</script>
     <script>scripts\scr_dialog.gml</script>
+    <script>scripts\scr_max_depth.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_default</font>
@@ -140,6 +145,10 @@
     </objects>
     <objects name="NPCs">
       <object>objects\obj_test_npc</object>
+    </objects>
+    <objects name="Props">
+      <object>objects\obj_grass_patch</object>
+      <object>objects\obj_tree</object>
     </objects>
   </objects>
   <rooms name="rooms">

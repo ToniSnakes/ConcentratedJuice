@@ -68,6 +68,7 @@
           <argument>
             <kind>1</kind>
             <string> draw_set_color(c_white);
+ draw_set_font(fnt_default);//setam fontul
 // mai sus am setat culoarea pe alb , sa se poata vedea deasupra intunericului 
 {
     //Afiseaza stats-urile importante ale personajului

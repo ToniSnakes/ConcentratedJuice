@@ -36,6 +36,25 @@
     global.dmg = 1;
     global.mana = 100;
     global.maxmana = 100;
+   
+     // these are some variables used for enemy behaviour , i put them in a global list , so it can be easier modified from here , rather than going in every enemy object
+    global.enemy_sight_range=256;
+    global.spider_sight_range=192;
+    global.axeknight_sight_range=256;
+    global.firespirit_sight_range=312;
+    global.axeknight_attack_timer=65;
+    global.enemy_hp=2;
+    global.spider_hp=2;
+    global.axeknight_hp=3;
+    global.firespirit_hp=3;
+    global.spider_jump_speed=8;
+    global.spider_walk_speed=1;
+    global.firespirit_attack_timer=35;
+    global.firespirit_projectile_speed=11;
+    global.firespirit_projectile_damage=2;
+    global.spider_jump_timer=30;
+    global.spider_damage_timer=30;
+    global.spider_damage=2;
 }
 </string>
           </argument>
@@ -61,7 +80,8 @@
             <kind>1</kind>
             <string>{
     //Lvl up
-    if(global.expr &gt;= global.maxexpr) {
+    if(global.expr &gt;= global.maxexpr) 
+    {
         global.level += 1;
         global.hp += 5;
         global.maxhp += 5;

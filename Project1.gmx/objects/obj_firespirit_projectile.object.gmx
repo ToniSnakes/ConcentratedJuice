@@ -36,6 +36,8 @@
           </argument>
         </arguments>
       </action>
+    </event>
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>601</id>
@@ -52,7 +54,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>scr_repel</script>
+            <script>scr_find_depth</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -76,8 +78,6 @@
           </argument>
         </arguments>
       </action>
-    </event>
-    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>601</id>
@@ -94,7 +94,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>scr_find_depth</script>
+            <script>scr_repel</script>
           </argument>
           <argument>
             <kind>0</kind>

@@ -64,6 +64,7 @@
     <sprites name="Props">
       <sprite>sprites\spr_tree</sprite>
       <sprite>sprites\spr_grass_patch</sprite>
+      <sprite>sprites\spr_blacksmith</sprite>
     </sprites>
     <sprites name="Menu">
       <sprite>sprites\spr_exit</sprite>

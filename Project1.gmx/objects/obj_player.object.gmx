@@ -96,8 +96,11 @@
         obj_feet.recovery = 1;  //Seteaza ca "true" recovery-ul dupa un atac
         obj_feet.recovery_time = -1; //si seteaza timer-ul la -1
     }
-    if (speed &gt; 0){
+    if (speed &gt; 0){ //Dash counter
         --speed;
+    }
+    if (speed &lt; 0){ //Knockback/Bounce counter
+        ++speed;
     }
     //Timer-ul propriu-zis pana la aparitia wave-ului
     if (wave &lt; global.att_speed/3){
@@ -197,6 +200,64 @@
           <argument>
             <kind>0</kind>
             <string></string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_bosswall">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>{
+    //Bounce
+    speed *= -1;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_wall">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>{
+    //Bounce
+    if (speed &gt; 5){
+        speed -= 5;
+        speed *= -1;
+    }
+    else{
+        speed = -1;
+    }
+}
+</string>
           </argument>
         </arguments>
       </action>

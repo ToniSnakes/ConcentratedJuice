@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>{
     image_alpha = .35;
-    image_speed = .50;
+    image_speed = .60;
 }
 </string>
           </argument>

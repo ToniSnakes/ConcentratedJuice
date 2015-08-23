@@ -181,7 +181,7 @@
             <string>{
   if (is_teleporting==0) // if the spirit isn't teleporting
   {
-     hp-=1;
+     hp-=global.dmg;
      is_teleporting=1;
      destination_x=random_range(20,room_width-20);
      destination_y=random_range(20,room_height-20);

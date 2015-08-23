@@ -64,12 +64,17 @@
     <sprites name="Props">
       <sprite>sprites\spr_tree</sprite>
       <sprite>sprites\spr_grass_patch</sprite>
+      <sprite>sprites\spr_blacksmith</sprite>
+      <sprite>sprites\spr_potion_store</sprite>
     </sprites>
     <sprites name="Menu">
       <sprite>sprites\spr_exit</sprite>
       <sprite>sprites\spr_newgame</sprite>
       <sprite>sprites\spr_cursor</sprite>
       <sprite>sprites\spr_load</sprite>
+    </sprites>
+    <sprites name="Swords">
+      <sprite>sprites\spr_steel_sword_ground</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -149,6 +154,11 @@
     <objects name="Props">
       <object>objects\obj_grass_patch</object>
       <object>objects\obj_tree</object>
+    </objects>
+    <objects name="Swords">
+      <objects name="Steel Sword">
+        <object>objects\obj_steel_sword_ground</object>
+      </objects>
     </objects>
   </objects>
   <rooms name="rooms">

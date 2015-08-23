@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>{
+    // player values
     global.level = 1;
     global.hp = 10;
     global.maxhp = 10;
@@ -55,6 +56,10 @@
     global.spider_jump_timer=30;
     global.spider_damage_timer=30;
     global.spider_damage=2;
+    
+    // sword values
+    global.basic_sword_damage=1;
+    global.steel_sword_damage=2;
 }
 </string>
           </argument>

@@ -97,7 +97,7 @@
   if (attack_timer&lt;global.axeknight_attack_timer) //attack timer incrementation
    attack_timer++;
     
-  if (hp==0)
+  if (hp&lt;=0)
    instance_destroy();
 
   if (instance_exists(obj_player))

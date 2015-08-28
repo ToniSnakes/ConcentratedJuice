@@ -295,7 +295,7 @@
   if (is_jumping==1 &amp;&amp; sprite_index!=spr_spider_jumping) // if the spider is jumping , set it to the according animation
   {
     sprite_index=spr_spider_jumping;
-    image_speed=0.25;
+    image_speed=0.5;
   }
 }
 </string>

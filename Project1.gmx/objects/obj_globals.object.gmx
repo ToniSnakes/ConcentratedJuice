@@ -35,8 +35,8 @@
     global.att_speed = 9;
     global.move_speed = 4;
     global.dmg = 1;
-    global.mana = 10;
-    global.maxmana = 10;
+    global.mana = 100;
+    global.maxmana = 100;
    
      // these are some variables used for enemy behaviour , i put them in a global list , so it can be easier modified from here , rather than going in every enemy object
     global.enemy_sight_range=256;
@@ -119,10 +119,10 @@
             <string>draw_set_color(c_white)
 draw_set_font(fnt_default)
 draw_sprite(S_Empty,1,view_xview[0]+15,view_yview[0]+15)
-draw_sprite_ext(S_healt,1,view_xview[0]+20,view_yview[0]+15,(global.hp/global.maxhp)*100,1,0,c_white,1);
+draw_sprite_ext(S_healt,1,view_xview[0]+82,view_yview[0]+45,((global.hp/global.maxhp)*100)/100,1,0,c_white,1);
 draw_sprite(S_border,1,view_xview[0]+15,view_yview[0]+15)
 draw_sprite(sprite22,1,view_xview[0]+150,view_yview[0]+67)
-draw_sprite_ext(Magic_Border,1,view_xview[0]+85,view_yview[0]+68,(global.mana/global.maxmana)*100,1,0,c_white,1);
+draw_sprite_ext(Magic_Border,1,view_xview[0]+85,view_yview[0]+68,((global.mana/global.maxmana)*100)/100,1,0,c_white,1);
 </string>
           </argument>
         </arguments>

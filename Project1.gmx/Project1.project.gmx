@@ -66,6 +66,15 @@
       <sprite>sprites\spr_grass_patch</sprite>
       <sprite>sprites\spr_blacksmith</sprite>
       <sprite>sprites\spr_potion_store</sprite>
+      <sprite>sprites\spr_road</sprite>
+      <sprite>sprites\spr_house</sprite>
+      <sprite>sprites\spr_backhouse</sprite>
+      <sprite>sprites\spr_well</sprite>
+      <sprite>sprites\S_border</sprite>
+      <sprite>sprites\S_healt</sprite>
+      <sprite>sprites\S_Empty</sprite>
+      <sprite>sprites\Magic_Border</sprite>
+      <sprite>sprites\sprite22</sprite>
     </sprites>
     <sprites name="Menu">
       <sprite>sprites\spr_exit</sprite>
@@ -88,6 +97,7 @@
     <script>scripts\spr_buttonpress.gml</script>
     <script>scripts\scr_dialog.gml</script>
     <script>scripts\scr_max_depth.gml</script>
+    <script>scripts\scr_shadow.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_default</font>
@@ -154,6 +164,12 @@
     <objects name="Props">
       <object>objects\obj_grass_patch</object>
       <object>objects\obj_tree</object>
+      <object>objects\obj_blacksmith</object>
+      <object>objects\obj_medic</object>
+      <object>objects\obj_road</object>
+      <object>objects\obj_house</object>
+      <object>objects\obj_house_back</object>
+      <object>objects\obj_well</object>
     </objects>
     <objects name="Swords">
       <objects name="Steel Sword">
@@ -163,6 +179,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
+    <room>rooms\room4</room>
     <room>rooms\rm_town</room>
     <room>rooms\rm_mob_area</room>
     <room>rooms\rm_lich</room>

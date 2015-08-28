@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-1000</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -67,17 +67,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string> draw_set_color(c_white);
- draw_set_font(fnt_default);//setam fontul
+            <string>// draw_set_color(c_white);
+ //draw_set_font(fnt_default);//setam fontul
 // mai sus am setat culoarea pe alb , sa se poata vedea deasupra intunericului 
-{
+//{
     //Afiseaza stats-urile importante ale personajului
-    draw_text(x,y,"Level: "+string(global.level));
-    draw_text(x,y+16,"HP: "+string(global.hp)+"/"+string(global.maxhp));
-    draw_text(x,y+32,"MP: "+string(global.mana)+"/"+string(global.maxmana));
-    draw_text(x,y+48,"EXP: "+string(global.expr)+"/"+string(global.maxexpr));
-    draw_text(x,y+64, "FPS = " + string(fps));
-}
+    //draw_text(x,y,"Level: "+string(global.level));
+    //draw_text(x,y+16,"HP: "+string(global.hp)+"/"+string(global.maxhp));
+    //draw_text(x,y+32,"MP: "+string(global.mana)+"/"+string(global.maxmana));
+    //draw_text(x,y+48,"EXP: "+string(global.expr)+"/"+string(global.maxexpr));
+    //draw_text(x,y+64, "FPS = " + string(fps));
+//}
 </string>
           </argument>
         </arguments>

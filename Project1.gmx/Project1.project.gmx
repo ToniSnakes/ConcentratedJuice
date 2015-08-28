@@ -76,6 +76,9 @@
       <sprite>sprites\S_Empty</sprite>
       <sprite>sprites\Magic_Border</sprite>
       <sprite>sprites\sprite22</sprite>
+      <sprite>sprites\spr_campfire_lit</sprite>
+      <sprite>sprites\spr_campfire_notlit</sprite>
+      <sprite>sprites\spr_campfire_saving</sprite>
     </sprites>
     <sprites name="Menu">
       <sprite>sprites\spr_exit</sprite>
@@ -158,6 +161,7 @@
       <object>objects\obj_exit</object>
       <object>objects\obj_new</object>
       <object>objects\obj_load</object>
+      <object>objects\obj_test_load</object>
     </objects>
     <objects name="NPCs">
       <object>objects\obj_test_npc</object>
@@ -172,6 +176,10 @@
       <object>objects\obj_house</object>
       <object>objects\obj_house_back</object>
       <object>objects\obj_well</object>
+      <objects name="Campfire">
+        <object>objects\obj_campfire</object>
+        <object>objects\obj_save_thingie</object>
+      </objects>
     </objects>
     <objects name="Swords">
       <objects name="Steel Sword">

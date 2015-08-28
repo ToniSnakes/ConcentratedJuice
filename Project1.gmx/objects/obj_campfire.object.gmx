@@ -92,7 +92,7 @@
           <argument>
             <kind>1</kind>
             <string>{
-  if (place_meeting(x,y,obj_player) &amp;&amp; game_saved==0) // if the NPC collides with the player 
+  if (place_meeting(x,y,obj_player)) // if the NPC collides with the player 
   {
     showtext =1; // it can show it's dialogue box
   }
@@ -160,9 +160,8 @@
  /* 
     so , it was impossible to save the game only if there was collision between the player
     and the campfire , so i thought that i need another object to do that. That object is 
-    the save thingie. That object appears only wehn you are colliding with the campfire and
-    your game hasnt been saved yet at that campfire. After you save , the save thingie will
-    disappear.
+    the save thingie. That object appears only wehn you are colliding with the campfire.
+    After you save , the save thingie will disappear.
  */
  if (!instance_exists(obj_save_thingie) &amp;&amp; showtext==1)
   instance_create(x,y,obj_save_thingie);

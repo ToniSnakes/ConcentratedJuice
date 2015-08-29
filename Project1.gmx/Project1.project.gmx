@@ -79,6 +79,7 @@
       <sprite>sprites\spr_campfire_lit</sprite>
       <sprite>sprites\spr_campfire_notlit</sprite>
       <sprite>sprites\spr_campfire_saving</sprite>
+      <sprite>sprites\spr_dungeon_bricks</sprite>
     </sprites>
     <sprites name="Menu">
       <sprite>sprites\spr_exit</sprite>

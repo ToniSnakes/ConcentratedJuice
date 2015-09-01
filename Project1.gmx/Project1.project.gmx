@@ -18,8 +18,8 @@
       </sprites>
       <sprites name="Fire Spirit">
         <sprite>sprites\spr_firespirit</sprite>
-        <sprite>sprites\spr_firespirit_appearing</sprite>
         <sprite>sprites\spr_firespirit_dissappearing</sprite>
+        <sprite>sprites\spr_firespirit_appearing</sprite>
         <sprite>sprites\spr_firespirit_projectile</sprite>
       </sprites>
       <sprites name="Axe Knight">
@@ -36,16 +36,16 @@
       <sprite>sprites\spr_exp</sprite>
     </sprites>
     <sprites name="Player">
-      <sprite>sprites\spr_player_stand</sprite>
       <sprite>sprites\spr_player_run_aux</sprite>
-      <sprite>sprites\spr_player_attack</sprite>
-      <sprite>sprites\spr_player_idle</sprite>
-      <sprite>sprites\spr_player_repel</sprite>
-      <sprite>sprites\spr_head</sprite>
-      <sprite>sprites\spr_player_run</sprite>
       <sprite>sprites\spr_player_shielded</sprite>
       <sprite>sprites\spr_wave</sprite>
       <sprite>sprites\spr_repel</sprite>
+      <sprite>sprites\spr_head</sprite>
+      <sprite>sprites\spr_player_run</sprite>
+      <sprite>sprites\spr_player_attack</sprite>
+      <sprite>sprites\spr_player_idle</sprite>
+      <sprite>sprites\spr_player_repel</sprite>
+      <sprite>sprites\spr_player_stand</sprite>
     </sprites>
     <sprites name="Teleporters">
       <sprite>sprites\spr_warp</sprite>
@@ -79,7 +79,12 @@
       <sprite>sprites\spr_campfire_lit</sprite>
       <sprite>sprites\spr_campfire_notlit</sprite>
       <sprite>sprites\spr_campfire_saving</sprite>
-      <sprite>sprites\spr_dungeon_bricks</sprite>
+      <sprites name="Dungeon">
+        <sprite>sprites\spr_ground</sprite>
+        <sprite>sprites\spr_wrong_bridge</sprite>
+        <sprite>sprites\spr_bridge</sprite>
+        <sprite>sprites\spr_right_bridge</sprite>
+      </sprites>
     </sprites>
     <sprites name="Menu">
       <sprite>sprites\spr_exit</sprite>
@@ -91,7 +96,10 @@
       <sprite>sprites\spr_steel_sword_ground</sprite>
     </sprites>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bg_ground_dungeon_vertical</background>
+    <background>background\bg_ground_dungeon_horizontal</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_find_depth.gml</script>
@@ -181,6 +189,11 @@
         <object>objects\obj_campfire</object>
         <object>objects\obj_save_thingie</object>
       </objects>
+      <objects name="Dungeon">
+        <object>objects\obj_wrong_bridge</object>
+        <object>objects\onj_bridge</object>
+        <object>objects\obj_bridge_right</object>
+      </objects>
     </objects>
     <objects name="Swords">
       <objects name="Steel Sword">
@@ -189,8 +202,10 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_menu</room>
+    <room>rooms\rm_dungeon</room>
     <room>rooms\room4</room>
+    <room>rooms\rm_fountain</room>
+    <room>rooms\rm_menu</room>
     <room>rooms\rm_town</room>
     <room>rooms\rm_mob_area</room>
     <room>rooms\rm_lich</room>

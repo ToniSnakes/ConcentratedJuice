@@ -179,16 +179,16 @@
           <argument>
             <kind>1</kind>
             <string>{
-  if (is_teleporting==0) // if the spirit isn't teleporting
+  if (is_teleporting==0 &amp;&amp; instance_exists(obj_player)) // if the spirit isn't teleporting
   {
      hp-=global.dmg;
      is_teleporting=1;
-     destination_x=random_range(20,room_width-20);
-     destination_y=random_range(20,room_height-20);
-     while (!place_free(destination_x,destination_y)) // searches for a valid spot to teleport
+     destination_x=obj_player.x+random_range(50,150);
+     destination_y=obj_player.y+random_range(50,150);
+     while (!place_free(destination_x,destination_y) &amp;&amp; !collision_line(x,y,destination_x,destination_y,obj_wall,false,true)) // searches for a valid spot to teleport
      {
-       destination_x=random_range(20,room_width-20);
-       destination_y=random_range(20,room_height-20);
+       destination_x=obj_player.x+random_range(30,120);
+       destination_y=obj_player.y+random_range(30,120);
      }
   }
 }

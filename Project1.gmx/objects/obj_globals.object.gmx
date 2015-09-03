@@ -37,6 +37,7 @@
     global.dmg = 1;
     global.mana = 100;
     global.maxmana = 100;
+    global.dodgecost = 30 ;
    
      // these are some variables used for enemy behaviour , i put them in a global list , so it can be easier modified from here , rather than going in every enemy object
     global.enemy_sight_range=256;

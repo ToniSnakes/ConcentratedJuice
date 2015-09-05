@@ -10,11 +10,11 @@
       <sprite>sprites\spr_enemy_run</sprite>
       <sprites name="Lich">
         <sprite>sprites\spr_lich</sprite>
-        <sprite>sprites\spr_summoning_stone_1</sprite>
         <sprite>sprites\spr_fire_lich</sprite>
         <sprite>sprites\spr_sign_fire</sprite>
-        <sprite>sprites\spr_shielded_summoning_stone_1</sprite>
         <sprite>sprites\spr_projectile_lich</sprite>
+        <sprite>sprites\spr_shielded_summoning_stone_1</sprite>
+        <sprite>sprites\spr_summoning_stone_1</sprite>
       </sprites>
       <sprites name="Fire Spirit">
         <sprite>sprites\spr_firespirit</sprite>
@@ -53,8 +53,8 @@
     </sprites>
     <sprites name="Torches">
       <sprite>sprites\spr_torch_on_r</sprite>
-      <sprite>sprites\spr_torch_off_r</sprite>
       <sprite>sprites\spr_torch_on_l</sprite>
+      <sprite>sprites\spr_torch_off_r</sprite>
       <sprite>sprites\spr_torch_off_l</sprite>
     </sprites>
     <sprites name="Walls">
@@ -62,16 +62,24 @@
       <sprite>sprites\spr_boss_wall</sprite>
     </sprites>
     <sprites name="Props">
-      <sprite>sprites\spr_tree</sprite>
-      <sprite>sprites\spr_grass_patch</sprite>
-      <sprite>sprites\spr_blacksmith</sprite>
-      <sprite>sprites\spr_potion_store</sprite>
-      <sprite>sprites\spr_road</sprite>
-      <sprite>sprites\spr_house</sprite>
-      <sprite>sprites\spr_backhouse</sprite>
-      <sprite>sprites\spr_well</sprite>
+      <sprites name="Town">
+        <sprite>sprites\spr_blacksmith</sprite>
+        <sprite>sprites\spr_tree</sprite>
+        <sprite>sprites\spr_grass_patch</sprite>
+        <sprite>sprites\spr_potion_store</sprite>
+        <sprite>sprites\spr_road</sprite>
+        <sprite>sprites\spr_house</sprite>
+        <sprite>sprites\spr_backhouse</sprite>
+        <sprite>sprites\spr_well</sprite>
+        <sprite>sprites\spr_oldman</sprite>
+      </sprites>
+      <sprites name="Dungeon">
+        <sprite>sprites\spr_ground</sprite>
+        <sprite>sprites\spr_wrong_bridge</sprite>
+        <sprite>sprites\spr_bridge</sprite>
+        <sprite>sprites\spr_right_bridge</sprite>
+      </sprites>
       <sprite>sprites\S_border</sprite>
-      <sprite>sprites\spr_oldman</sprite>
       <sprite>sprites\S_healt</sprite>
       <sprite>sprites\S_Empty</sprite>
       <sprite>sprites\Magic_Border</sprite>
@@ -79,12 +87,7 @@
       <sprite>sprites\spr_campfire_lit</sprite>
       <sprite>sprites\spr_campfire_notlit</sprite>
       <sprite>sprites\spr_campfire_saving</sprite>
-      <sprites name="Dungeon">
-        <sprite>sprites\spr_ground</sprite>
-        <sprite>sprites\spr_wrong_bridge</sprite>
-        <sprite>sprites\spr_bridge</sprite>
-        <sprite>sprites\spr_right_bridge</sprite>
-      </sprites>
+      <sprite>sprites\spr_board</sprite>
     </sprites>
     <sprites name="Menu">
       <sprite>sprites\spr_exit</sprite>

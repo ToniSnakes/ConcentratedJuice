@@ -192,6 +192,9 @@
     <instance objName="obj_wall" x="256" y="352" name="inst_34B86CC9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="224" y="352" name="inst_823CA10C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="192" y="352" name="inst_116EB42F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_atack" x="224" y="512" name="inst_5D73095B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dodge" x="320" y="512" name="inst_F875EB1C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_shield" x="416" y="512" name="inst_2ACF3509" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bg_ground_dungeon_vertical" x="64" y="288" w="64" h="64" xo="0" yo="0" id="10000946" name="inst_5A8854F5" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

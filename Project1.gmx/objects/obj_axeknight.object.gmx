@@ -100,11 +100,21 @@
   if (hp&lt;=0)
    instance_destroy();
 
-  if (instance_exists(obj_player))
+  if (instance_exists(obj_player)) 
   {
+    
+     if (x &lt;= obj_player.x) // roteste imaginea axe knight-ului 
+        {
+            image_xscale = 1;
+        }
+        else
+        {
+            image_xscale = -1;
+        }
+     
     if(distance_to_point(obj_player.x,obj_player.y) &lt;= global.axeknight_sight_range &amp;&amp; !collision_line(x,y,obj_player.x,obj_player.y,obj_wall,false,true) &amp;&amp; attack_timer&gt;=global.axeknight_attack_timer) //if the axeknight sees the player
      {
-       instance_create(x,y,obj_axe);
+       instance_create(x,y-5,obj_axe);
        attack_timer=0;
      }
   }

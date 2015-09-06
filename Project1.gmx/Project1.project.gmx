@@ -26,6 +26,7 @@
         <sprite>sprites\spr_axeknight_idle</sprite>
         <sprite>sprites\spr_axe</sprite>
         <sprite>sprites\spr_axeknight_shielded</sprite>
+        <sprite>sprites\spr_axe_spin</sprite>
       </sprites>
       <sprites name="Spider">
         <sprite>sprites\spr_spider_idle</sprite>
@@ -79,6 +80,9 @@
         <sprite>sprites\spr_bridge</sprite>
         <sprite>sprites\spr_right_bridge</sprite>
       </sprites>
+      <sprites name="Tutorial">
+        <sprite>sprites\spr_board</sprite>
+      </sprites>
       <sprite>sprites\S_border</sprite>
       <sprite>sprites\S_healt</sprite>
       <sprite>sprites\S_Empty</sprite>
@@ -87,7 +91,6 @@
       <sprite>sprites\spr_campfire_lit</sprite>
       <sprite>sprites\spr_campfire_notlit</sprite>
       <sprite>sprites\spr_campfire_saving</sprite>
-      <sprite>sprites\spr_board</sprite>
     </sprites>
     <sprites name="Menu">
       <sprite>sprites\spr_exit</sprite>
@@ -197,6 +200,11 @@
         <object>objects\onj_bridge</object>
         <object>objects\obj_bridge_right</object>
       </objects>
+      <objects name="Tutorial">
+        <object>objects\obj_atack</object>
+        <object>objects\obj_dodge</object>
+        <object>objects\obj_shield</object>
+      </objects>
     </objects>
     <objects name="Swords">
       <objects name="Steel Sword">
@@ -206,10 +214,9 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_dungeon</room>
-    <room>rooms\room4</room>
+    <room>rooms\rm_town</room>
     <room>rooms\rm_fountain</room>
     <room>rooms\rm_menu</room>
-    <room>rooms\rm_town</room>
     <room>rooms\rm_mob_area</room>
     <room>rooms\rm_lich</room>
   </rooms>

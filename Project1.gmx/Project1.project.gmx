@@ -220,9 +220,9 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_menu</room>
     <room>rooms\rm_town</room>
     <room>rooms\rm_dungeon</room>
-    <room>rooms\rm_menu</room>
     <room>rooms\rm_fountain</room>
   </rooms>
   <help>

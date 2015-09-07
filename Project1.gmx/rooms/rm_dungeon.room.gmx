@@ -608,8 +608,7 @@
     <instance objName="obj_wall" x="1184" y="1752" name="inst_BACD4E74" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy" x="544" y="1176" name="inst_A23AC191" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_torch_r" x="1408" y="360" name="inst_96D11072" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_torch_l" x="1504" y="528" name="inst_663F8B37" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_torch_r" x="960" y="744" name="inst_7EF2C758" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_torch_l" x="1504" y="598" name="inst_663F8B37" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_torch_r" x="960" y="864" name="inst_D440C2D4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_torch_r" x="270" y="888" name="inst_08959B9A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_torch_l" x="336" y="1046" name="inst_82F93E95" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

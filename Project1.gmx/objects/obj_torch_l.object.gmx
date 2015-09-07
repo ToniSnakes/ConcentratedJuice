@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>{
     //Seteaza raza si deseneaza lumina cu ajutorul dubioseniilor
-    size = 128;
+    size = 200;
     if (sprite_index == spr_torch_on_l){
         draw_set_blend_mode(bm_subtract);
         surface_set_target(light);

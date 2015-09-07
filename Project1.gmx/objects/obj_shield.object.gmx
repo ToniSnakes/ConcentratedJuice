@@ -166,7 +166,7 @@
             <string>draw_self();
 if(showtext == 1)
 {
-scr_dialog("Press Right click to use the shield.");
+scr_dialog("Hold Right click to use the shield.");
 }
 </string>
           </argument>

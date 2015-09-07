@@ -61,6 +61,9 @@
     // sword values
     global.basic_sword_damage=1;
     global.steel_sword_damage=2;
+    
+    // world value
+    global.tutorial_completed=0;
 }
 </string>
           </argument>
@@ -86,6 +89,8 @@
             <kind>1</kind>
             <string>{
     //Lvl up
+    global.hp=min(global.hp,global.maxhp);
+    
     if(global.expr &gt;= global.maxexpr) 
     {
         global.level += 1;

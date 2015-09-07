@@ -50,8 +50,6 @@
 //window_set_fullscreen(true)
 Lungime = display_get_width()
 Inaltime = display_get_height()
-
-
  
 window_set_size(Lungime,Inaltime)
 
@@ -62,7 +60,6 @@ view_hport = Inaltime
 
 surface_resize(application_surface,Lungime,Inaltime)
 display_reset(8,true)
-
 </string>
           </argument>
         </arguments>

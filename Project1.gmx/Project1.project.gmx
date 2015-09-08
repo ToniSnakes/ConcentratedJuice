@@ -60,6 +60,8 @@
       <sprite>sprites\spr_torch_on_l</sprite>
       <sprite>sprites\spr_torch_off_r</sprite>
       <sprite>sprites\spr_torch_off_l</sprite>
+      <sprite>sprites\spr_torch_off_s</sprite>
+      <sprite>sprites\spr_torch_on_s</sprite>
     </sprites>
     <sprites name="Walls">
       <sprite>sprites\spr_wall</sprite>
@@ -167,6 +169,7 @@
       <object>objects\obj_lighting</object>
       <object>objects\obj_torch_r</object>
       <object>objects\obj_torch_l</object>
+      <object>objects\obj_torch_s</object>
     </objects>
     <objects name="Walls">
       <object>objects\obj_wall</object>

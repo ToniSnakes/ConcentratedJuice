@@ -639,6 +639,7 @@
     <instance objName="obj_wall" x="736" y="-24" name="inst_526DBF2C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_torch_board" x="800" y="214" name="inst_D0A21C14" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_test_load" x="160" y="114" name="inst_B4D5D2F8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_torch_s" x="256" y="274" name="inst_48D9CCE2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bg_ground_dungeon_vertical" x="0" y="224" w="64" h="64" xo="0" yo="0" id="10000107" name="inst_5AF4B4A0" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

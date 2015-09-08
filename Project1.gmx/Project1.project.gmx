@@ -7,14 +7,13 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprites name="enemy">
-      <sprite>sprites\spr_enemy_run</sprite>
       <sprites name="Lich">
         <sprite>sprites\spr_lich</sprite>
-        <sprite>sprites\spr_summoning_stone_1</sprite>
         <sprite>sprites\spr_fire_lich</sprite>
         <sprite>sprites\spr_sign_fire</sprite>
-        <sprite>sprites\spr_shielded_summoning_stone_1</sprite>
         <sprite>sprites\spr_projectile_lich</sprite>
+        <sprite>sprites\spr_shielded_summoning_stone_1</sprite>
+        <sprite>sprites\spr_summoning_stone_1</sprite>
       </sprites>
       <sprites name="Fire Spirit">
         <sprite>sprites\spr_firespirit</sprite>
@@ -26,10 +25,14 @@
         <sprite>sprites\spr_axeknight_idle</sprite>
         <sprite>sprites\spr_axe</sprite>
         <sprite>sprites\spr_axeknight_shielded</sprite>
+        <sprite>sprites\spr_axe_spin</sprite>
       </sprites>
       <sprites name="Spider">
         <sprite>sprites\spr_spider_idle</sprite>
         <sprite>sprites\spr_spider_jumping</sprite>
+      </sprites>
+      <sprites name="Ghost">
+        <sprite>sprites\spr_enemy_run</sprite>
       </sprites>
     </sprites>
     <sprites name="Other">
@@ -50,11 +53,12 @@
     <sprites name="Teleporters">
       <sprite>sprites\spr_warp</sprite>
       <sprite>sprites\spr_town_warp</sprite>
+      <sprite>sprites\spr_towntele</sprite>
     </sprites>
     <sprites name="Torches">
       <sprite>sprites\spr_torch_on_r</sprite>
-      <sprite>sprites\spr_torch_off_r</sprite>
       <sprite>sprites\spr_torch_on_l</sprite>
+      <sprite>sprites\spr_torch_off_r</sprite>
       <sprite>sprites\spr_torch_off_l</sprite>
     </sprites>
     <sprites name="Walls">
@@ -62,16 +66,27 @@
       <sprite>sprites\spr_boss_wall</sprite>
     </sprites>
     <sprites name="Props">
-      <sprite>sprites\spr_tree</sprite>
-      <sprite>sprites\spr_grass_patch</sprite>
-      <sprite>sprites\spr_blacksmith</sprite>
-      <sprite>sprites\spr_potion_store</sprite>
-      <sprite>sprites\spr_road</sprite>
-      <sprite>sprites\spr_house</sprite>
-      <sprite>sprites\spr_backhouse</sprite>
-      <sprite>sprites\spr_well</sprite>
+      <sprites name="Town">
+        <sprite>sprites\spr_blacksmith</sprite>
+        <sprite>sprites\spr_tree</sprite>
+        <sprite>sprites\spr_grass_patch</sprite>
+        <sprite>sprites\spr_potion_store</sprite>
+        <sprite>sprites\spr_road</sprite>
+        <sprite>sprites\spr_house</sprite>
+        <sprite>sprites\spr_backhouse</sprite>
+        <sprite>sprites\spr_well</sprite>
+        <sprite>sprites\spr_oldman</sprite>
+      </sprites>
+      <sprites name="Dungeon">
+        <sprite>sprites\spr_ground</sprite>
+        <sprite>sprites\spr_wrong_bridge</sprite>
+        <sprite>sprites\spr_bridge</sprite>
+        <sprite>sprites\spr_right_bridge</sprite>
+      </sprites>
+      <sprites name="Tutorial">
+        <sprite>sprites\spr_board</sprite>
+      </sprites>
       <sprite>sprites\S_border</sprite>
-      <sprite>sprites\spr_oldman</sprite>
       <sprite>sprites\S_healt</sprite>
       <sprite>sprites\S_Empty</sprite>
       <sprite>sprites\Magic_Border</sprite>
@@ -79,12 +94,6 @@
       <sprite>sprites\spr_campfire_lit</sprite>
       <sprite>sprites\spr_campfire_notlit</sprite>
       <sprite>sprites\spr_campfire_saving</sprite>
-      <sprites name="Dungeon">
-        <sprite>sprites\spr_ground</sprite>
-        <sprite>sprites\spr_wrong_bridge</sprite>
-        <sprite>sprites\spr_bridge</sprite>
-        <sprite>sprites\spr_right_bridge</sprite>
-      </sprites>
     </sprites>
     <sprites name="Menu">
       <sprite>sprites\spr_exit</sprite>
@@ -185,6 +194,7 @@
       <object>objects\obj_house</object>
       <object>objects\obj_house_back</object>
       <object>objects\obj_well</object>
+      <object>objects\obj_dungeon_tele</object>
       <objects name="Campfire">
         <object>objects\obj_campfire</object>
         <object>objects\obj_save_thingie</object>
@@ -194,6 +204,14 @@
         <object>objects\onj_bridge</object>
         <object>objects\obj_bridge_right</object>
       </objects>
+      <objects name="Tutorial">
+        <object>objects\obj_atack</object>
+        <object>objects\obj_dodge</object>
+        <object>objects\obj_shield</object>
+        <object>objects\obj_save_board</object>
+        <object>objects\obj_save2_board</object>
+        <object>objects\obj_torch_board</object>
+      </objects>
     </objects>
     <objects name="Swords">
       <objects name="Steel Sword">
@@ -202,13 +220,10 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_dungeon</room>
-    <room>rooms\room4</room>
-    <room>rooms\rm_fountain</room>
     <room>rooms\rm_menu</room>
     <room>rooms\rm_town</room>
-    <room>rooms\rm_mob_area</room>
-    <room>rooms\rm_lich</room>
+    <room>rooms\rm_dungeon</room>
+    <room>rooms\rm_fountain</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

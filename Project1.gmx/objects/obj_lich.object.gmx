@@ -68,6 +68,7 @@
             <string>{
  lich_hp=4; // lich's health
  attack_timer=0; // timer used for attack patterns
+ image_speed=0.4;
 }
 </string>
           </argument>
@@ -95,12 +96,12 @@
 
 // The idea based on an attack timer , knowing the room speed is 30
 
-if (instance_exists(obj_player))
+if (instance_exists(obj_player) &amp;&amp; !instance_exists(obj_boss_wall))
 {
-   if (attack_timer==235 &amp;&amp; lich_hp&lt;=2) // special rage attack when hp is lower than 3 (aka 2 stones left
+   if (attack_timer==240 &amp;&amp; lich_hp&lt;=3) // special rage attack : when hp is lower than 4 (aka 2 stones left
    {
-       for (i=1;i&lt;=22;i++)
-        instance_create(random_range(200,825),random_range(100,500),obj_fire_lich);
+       for (i=1;i&lt;=(4-lich_hp)*4+16;i++)
+        instance_create(random_range(x-250,x+250),random_range(y-200,y+200),obj_fire_lich);
    }
    
    if (attack_timer%20==0 &amp;&amp; attack_timer&lt;100) // phase 1: ground fires

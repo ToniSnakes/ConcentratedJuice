@@ -28,8 +28,8 @@
             <string>{
     // player values
     global.level = 1;
-    global.hp = 10.0;
-    global.maxhp = 10.0;
+    global.hp = 12.0;
+    global.maxhp = 12.0;
     global.expr = 0;
     global.maxexpr = 2;
     global.att_speed = 9;
@@ -37,12 +37,13 @@
     global.dmg = 1;
     global.mana = 100;
     global.maxmana = 100;
+    global.dodgecost = 30 ;
    
-     // these are some variables used for enemy behaviour , i put them in a global list , so it can be easier modified from here , rather than going in every enemy object
+     // enemy values - used for fast balancing
     global.enemy_sight_range=256;
     global.spider_sight_range=192;
     global.axeknight_sight_range=256;
-    global.firespirit_sight_range=312;
+    global.firespirit_sight_range=256;
     global.axeknight_attack_timer=65;
     global.enemy_hp=2;
     global.spider_hp=2;
@@ -50,16 +51,19 @@
     global.firespirit_hp=3;
     global.spider_jump_speed=8;
     global.spider_walk_speed=1;
-    global.firespirit_attack_timer=35;
+    global.firespirit_attack_timer=50;
     global.firespirit_projectile_speed=11;
-    global.firespirit_projectile_damage=2;
-    global.spider_jump_timer=30;
-    global.spider_damage_timer=30;
+    global.firespirit_projectile_damage=1;
+    global.spider_jump_timer=40;
+    global.spider_damage_timer=40;
     global.spider_damage=2;
     
     // sword values
     global.basic_sword_damage=1;
     global.steel_sword_damage=2;
+    
+    // world value
+    global.tutorial_completed=0;
 }
 </string>
           </argument>
@@ -85,6 +89,8 @@
             <kind>1</kind>
             <string>{
     //Lvl up
+    global.hp=min(global.hp,global.maxhp);
+    
     if(global.expr &gt;= global.maxexpr) 
     {
         global.level += 1;
@@ -95,6 +101,46 @@
     }
 }
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>601</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>9</kind>
+            <script>scr_stats_depth</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
